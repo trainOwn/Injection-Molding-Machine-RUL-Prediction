@@ -29,37 +29,21 @@ This project provides a complete **Remaining Useful Life (RUL)** prediction syst
 | **Dataset Size** | 47,211 samples |
 
 ---
+## Dataset Details
 
-## Project Structure
+The synthetic dataset simulates **50 injection molding machines** operating until failure. Each machine record includes:
 
-```
-injection-molding-rul-prediction/
-│
-├── models/                        # Pretrained model artifacts
-│   ├── best_rul_model.pkl         #   Trained Random Forest model
-│   ├── scaler.pkl                 #   StandardScaler for features
-│   └── feature_names.txt          #   Feature list (17 features)
-│
-├── trained_models/                # Your own trained models go here
-│   └── .gitkeep
-│
-├── data/                          # Datasets
-│   └── injection_molding_rul_dataset.csv  # Synthetic dataset (47k samples)
-│
-├── results/                       # Visualizations & outputs
-│   ├── rul_model_results.png      #   Model performance plots
-│   └── feature_importance.png     #   Feature importance chart
-│
-├── docs/                          # Documentation
-│   ├── Code_Documentation.docx
-│   └── Dataset_Documentation.docx
-│
-├── generate_injection_molding_rul_data.py   # Dataset generator
-├── train_rul_model.py                       # Training pipeline
-├── predict_rul.py                           # Inference & recommendations
-├── requirements.txt
-└── README.md
-```
+**Process Parameters** — injection pressure, barrel temperature, cycle time, clamping force, screw RPM, melt temperature, hydraulic pressure, power consumption
+
+**Condition Indicators** — vibration, defect rate, screw/barrel/heater/hydraulic wear indices
+
+**Environmental** — ambient temperature, material viscosity, shot size
+
+**Degradation Model** — Component wear follows a quadratic acceleration curve near failure:
+- Screw wear increases injection pressure and reduces RPM
+- Barrel wear destabilizes melt temperature
+- Heater degradation reduces temperature control precision
+- Hydraulic degradation causes erratic clamping force
 
 ---
 
@@ -171,24 +155,6 @@ Five regression models are trained and evaluated automatically:
 | 3 | Hydraulic degradation index | 5.30% |
 | 4 | Vibration | 4.35% |
 | 5 | Heater degradation index | 3.42% |
-
----
-
-## Dataset Details
-
-The synthetic dataset simulates **50 injection molding machines** operating until failure. Each machine record includes:
-
-**Process Parameters** — injection pressure, barrel temperature, cycle time, clamping force, screw RPM, melt temperature, hydraulic pressure, power consumption
-
-**Condition Indicators** — vibration, defect rate, screw/barrel/heater/hydraulic wear indices
-
-**Environmental** — ambient temperature, material viscosity, shot size
-
-**Degradation Model** — Component wear follows a quadratic acceleration curve near failure:
-- Screw wear increases injection pressure and reduces RPM
-- Barrel wear destabilizes melt temperature
-- Heater degradation reduces temperature control precision
-- Hydraulic degradation causes erratic clamping force
 
 ---
 
