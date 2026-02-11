@@ -68,8 +68,8 @@ injection-molding-rul-prediction/
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/<your-username>/injection-molding-rul-prediction.git
-cd injection-molding-rul-prediction
+git clone https://github.com/trainOwn/Injection-Molding-Machine-RUL-Prediction.git
+cd Injection-Molding-Machine-RUL-Prediction
 pip install -r requirements.txt
 ```
 
