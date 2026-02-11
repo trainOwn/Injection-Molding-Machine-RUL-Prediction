@@ -1,0 +1,17 @@
+injection_pressure_bar
+barrel_temp_celsius
+cycle_time_seconds
+clamping_force_kN
+screw_rpm
+melt_temp_celsius
+hydraulic_pressure_bar
+power_consumption_kW
+vibration_mm_s
+defect_rate
+ambient_temp_celsius
+material_viscosity_pas
+shot_size_grams
+screw_wear_index
+barrel_wear_index
+heater_degradation_index
+hydraulic_degradation_index
