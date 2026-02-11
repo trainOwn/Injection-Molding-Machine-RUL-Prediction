@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Trained models (user-generated) — uncomment to ignore large files
+# trained_models/*.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Misc
+*.log
+predictions_output.csv
